@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
+  <remote  name="github-git"
+           fetch="://github.com" />
+
   <!-- Obsolete -->
   <remove-project name="device/google/atv" />
   <remove-project name="device/google/bonito" />
@@ -65,24 +68,27 @@
   <remove-project name="platform/hardware/qcom/thermal" />
   <remove-project name="platform/hardware/qcom/audio" />
 
-  <!-- RMX1971 Specific -->
-  <project path="vendor/qcom/opensource/commonsys/cryptfs_hw" name="proton-RMX1971/android_vendor_qcom-opensource_cryptfs_hw" remote="github" revision="sc" />
+  <!-- Mojito Specific -->
+  <project path="vendor/qcom/opensource/commonsys/cryptfs_hw" name="ArrowOS/android_vendor_qcom_opensource_cryptfs_hw" remote="github" revision="arrow-12.0" />
   <remove-project name="android_vendor_qcom_opensource_interfaces" />
-  <project path="vendor/qcom/opensource/interfaces" name="proton-RMX1971/android_vendor_qcom-opensource_interfaces" remote="github" revision="sc" />
-  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="proton-RMX1971/android_vendor_qcom_opensource_data-ipa-cfg-mgr" remote="github" revision="sc" />
-  <project path="vendor/qcom/opensource/power" name="proton-RMX1971/android_vendor_qcom-opensource_power" remote="github" revision="sc" />
+  <project path="vendor/qcom/opensource/interfaces" name="ArrowOS/android_vendor_qcom_opensource_interfaces" remote="github" revision="arrow-12.0" />
+  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="ArrowOS/android_vendor_qcom_opensource_data-ipa-cfg-mgr" remote="github" revision="arrow-12.0" />
+  <project path="vendor/qcom/opensource/power" name="ArrowOS/android_vendor_qcom_opensource_power" remote="github" revision="arrow-12.0" />
   <remove-project name="android_vendor_qcom_opensource_commonsys-intf_display" />
-  <project path="vendor/qcom/opensource/commonsys-intf/display" name="proton-RMX1971/android_vendor_qcom-opensource_commonsys-intf_display" remote="github" revision="sc" />
+  <project path="vendor/qcom/opensource/commonsys-intf/display" name="ArrowOS/android_vendor_qcom-opensource_commonsys-intf_display" remote="github" revision="arrow-12.0" />
   <remove-project name="platform/hardware/qcom/display" />
-  <project path="hardware/qcom/display" name="proton-RMX1971/hardware_qcom_display" remote="github" revision="sc" />
+  <project path="hardware/qcom/display" name="ArrowOS/android_hardware_qcom_display" remote="github" revision="arrow-12.0-caf-sm8150" />
   <remove-project name="platform/hardware/qcom/media" />
-  <project path="hardware/qcom/media" name="proton-RMX1971/hardware_qcom_media" remote="github" revision="sc" />
+  <project path="hardware/qcom/media" name="ArrowOS/android_hardware_qcom_media" remote="github" revision="arrow-12.0-caf-sm8150" />
   <project path="vendor/qcom/opensource/audio-hal/primary-hal" name="proton-RMX1971/vendor_qcom_opensource_audio-hal_primary-hal" remote="github" revision="sc" />
+  <project path="hardware/xiaomi" name="LineageOS/android_hardware_xiaomi" remote="github" revision="lineage-19.0" />
 
-  <!-- RMX1971 Trees -->
-  <project path="device/realme/sdm710-common" name="proton-RMX1971/android_device_realme_sdm710-common" remote="github" revision="sc" />
-  <project path="vendor/realme/sdm710-common" name="proton-RMX1971/android_vendor_realme_sdm710-common" remote="github" revision="sc" />
-  <project path="device/realme/RMX1971" name="proton-RMX1971/android_device_realme_RMX1971" remote="github" revision="sc" />
-  <project path="vendor/realme/RMX1971" name="proton-RMX1971/android_vendor_realme_RMX1971" remote="github" revision="sc" />
-  <project path="kernel/realme/RMX1971" name="proton-RMX1971/kernel_realme_RMX1971" remote="github" revision="sc" />
+
+  <!-- Mojito Tree's -->
+  <project path="device/xiaomi/mojito" name="kjanek/android_device_xiaomi_mojito" remote="github-ssh" revision="proton-aosp" />
+  <project path="device/xiaomi/sm6150-common" name="kjanek/android_device_xiaomi_sm6150-common-ssh" remote="github" revision="proton-aosp" />
+  <project path="vendor/xiaomi/mojito" name="TheBootloops/vendor_xiaomi_mojito" remote="github-ssh" revision="twelve" />
+  <project path="vendor/xiaomi/sm6150-common" name="TheBootloops/vendor_xiaomi_mojito-common" remote="github-ssh" revision="twelve" />
+  <project path="kernel/xiaomi/sm6150" name="xiaomi-sdm678/android_kernel_xiaomi_mojito" remote="github-ssh" revision="12" />
+  
 </manifest>
